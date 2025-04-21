@@ -5,10 +5,9 @@ import java.util.List;
 
 public class Universe {
     private final List<Particle> particles = new ArrayList<>();
-    private double timeStep;
 
     public void update() {
-        updateTimeStep(particles);
+        double timeStep = updateTimeStep(particles);
         updateVelocities(particles, timeStep);
         updateCoordinates(particles, timeStep);
     }
@@ -44,7 +43,7 @@ public class Universe {
                 );
     }
 
-    private void updateTimeStep(List<Particle> particles) {
-        this.timeStep = 1;
+    private double updateTimeStep(List<Particle> particles) {
+        return 1;
     }
 }
